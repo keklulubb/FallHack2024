@@ -37,11 +37,12 @@ class Bird(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
 
         self.rect = self.image.get_rect()
+        print("self.rect")
         self.rect[0] = SCREEN_WIDHT / 6
         self.rect[1] = SCREEN_HEIGHT / 2
 
     def update(self):
-        self.current_image = (self.current_image + 1) % 2
+        self.current_image = (self.current_image + 1) % 2 #alternate between images
         self.image = self.images[self.current_image]
         self.speed += GRAVITY
 
@@ -52,7 +53,7 @@ class Bird(pygame.sprite.Sprite):
         self.speed = -SPEED
 
     def begin(self):
-        self.current_image = (self.current_image + 1) % 2
+        self.current_image = (self.current_image + 1) % 2 #pick one of two starter images
         self.image = self.images[self.current_image]
 
 

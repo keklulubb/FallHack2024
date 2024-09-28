@@ -19,7 +19,7 @@
 
 ## Requirements
 
-- Python 3.x
+- Python 3.10.14
 - Pygame library
 
  
